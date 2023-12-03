@@ -71,6 +71,7 @@
                 <button class="deactivate-btn" onclick="deactivateUser(1)">Deactivate</button>
             </td>
         </tr>
+        <div id="users"></div>
         <tr>
             <td>2</td>
             <td>admin_user</td>
@@ -98,6 +99,35 @@
             // Implement logic to deactivate user with the given ID
             console.log("Deactivate user with ID:", userId);
         }
+        /**
+        function getUsers() {
+  			fetch("http://localhost:8080/users")
+    			.then(function (response) {
+      			let users = response.json();
+      			document.getElementById("users").innerHTML = ```
+      			<tr>
+		            <td>${users.id}</td>
+		            <td>${users.name}</td>
+		            <td>
+		                <select>
+		                    <option value="GUEST">GUEST</option>
+		                    <option value="ADMIN" selected>ADMIN</option>
+		                </select>
+		            </td>
+		            <td>Inactive</td>
+		            <td>
+		                <button class="activate-btn" onclick="activateUser(2)">Activate</button>
+		            </td>
+		        </tr>
+      			```;
+    		})
+    		.catch(function (error) {
+      			console.error("Fetch error:", error);
+   		 	});
+		};
+		
+		getUsers();
+		**/
     </script>
 
 </body>

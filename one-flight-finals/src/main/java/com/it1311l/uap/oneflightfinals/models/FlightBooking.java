@@ -1,88 +1,111 @@
 package com.it1311l.uap.oneflightfinals.models;
 
 public class FlightBooking {
-	private Integer id;
-	private String email;
-	private String password;
-	private String birthday;
+	private Integer type;
+	private Integer subtype;
 	private String name;
-	private String phoneNumber;
-	private String passportDetails;
-	private String userType;
+	private String iataCode;
+	private GeoCode geoCode;
+	private Address address;
+	private TimeZone timeZone;
+	private Metric metrics;
 	
-	public FlightBooking(Integer id, String email, String password, String birthday, String name, String phoneNumber, String passportDetails, String userType) {
-		this.id = id;
-        this.email = email;
-        this.password = password;
-        this.birthday = birthday;
+	public FlightBooking(Integer type, Integer subtype, String name, String iataCode, GeoCode geoCode, Address address, TimeZone timeZone, Metric metrics) {
+		this.type = type;
+        this.subtype = subtype;
         this.name = name;
-        this.phoneNumber = phoneNumber;
-        this.passportDetails = passportDetails;
-        this.userType = userType;
+        this.iataCode = iataCode;
+        this.geoCode = geoCode;
+        this.address = address;
+        this.timeZone = timeZone;
+        this.metrics = metrics;
 	}
 	
 	public Integer getid() {
-        return id;
+        return type;
     }
 
-    public void setid(Integer id) {
-        this.id = id;
+    public void setid(Integer type) {
+        this.type = type;
     }
 
-    public String getemail() {
-        return email;
+    public Integer getqueuing_office_id() {
+        return subtype;
     }
 
-    public void setemail(String email) {
-        this.email = email;
+    public void setqueuing_office_id(Integer subtype) {
+        this.subtype = subtype;
     }
 
-    public String getpassword() {
-        return password;
-    }
-
-    public void setpassword(String password) {
-        this.password = password;
-    }
-
-    public String getbirthday() {
-        return birthday;
-    }
-
-    public void setbirthday(String birthday) {
-        this.birthday = birthday;
-    }
-
-    public String getname() {
+    public String getcreation_date() {
         return name;
     }
 
-    public void setname(String name) {
+    public void setcreation_date(String name) {
         this.name = name;
     }
 
-    public String getphoneNumber() {
-        return phoneNumber;
+    public String getorigin_location_code() {
+        return iataCode;
     }
 
-    public void setphoneNumber(String phoneNumber) {
-        this.phoneNumber = phoneNumber;
+    public void setorigin_location_code(String iataCode) {
+        this.iataCode = iataCode;
+    }
+
+    public GeoCode getround_trip_tag() {
+        return geoCode;
+    }
+
+    public void setround_trip_tag(GeoCode geoCode) {
+        this.geoCode = geoCode;
+    }
+
+    public Address getno_of_passenger() {
+        return address;
+    }
+
+    public void setno_of_passenger(Address address) {
+        this.address = address;
     }
     
-    public String getpassportDetails() {
-        return passportDetails;
+    public TimeZone getreference_no() {
+        return timeZone;
     }
 
-    public void setpassportDetails(String passportDetails) {
-        this.passportDetails = passportDetails;
+    public void setreference_no(TimeZone timeZone) {
+        this.timeZone = timeZone;
     }
 
-	public String getuserType() {
-		return userType;
+	public Metric getflight_offer_id() {
+		return metrics;
 	}
 
-	public void setuserType(String userType) {
-		this.userType = userType;
+	public void setflight_offer_id(Metric metrics) {
+		this.metrics = metrics;
 	}
+
+	
     
+}
+
+class GeoCode {
+	Float latitude;
+	Float longitude;
+}
+
+class Address {
+	String countryName;
+	String countryCode;
+	String stateCode;
+	String regionCode;
+}
+
+class TimeZone {
+	String offSet;
+	String referenceLocalDateTime;
+}
+
+class Metric {
+	Integer relevance;
 }
