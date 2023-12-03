@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Administration</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        button {
+            padding: 8px 16px;
+            cursor: pointer;
+        }
+
+        .activate-btn {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        .deactivate-btn {
+            background-color: #f44336;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>User Administration</h2>
+
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Username</th>
+            <th>Role</th>
+            <th>Status</th>
+            <th>Action</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>guest_user</td>
+            <td>
+                <select>
+                    <option value="GUEST" selected>GUEST</option>
+                    <option value="ADMIN">ADMIN</option>
+                </select>
+            </td>
+            <td>Active</td>
+            <td>
+                <button class="deactivate-btn" onclick="deactivateUser(1)">Deactivate</button>
+            </td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>admin_user</td>
+            <td>
+                <select>
+                    <option value="GUEST">GUEST</option>
+                    <option value="ADMIN" selected>ADMIN</option>
+                </select>
+            </td>
+            <td>Inactive</td>
+            <td>
+                <button class="activate-btn" onclick="activateUser(2)">Activate</button>
+            </td>
+        </tr>
+        <!-- Add more user rows as needed -->
+    </table>
+
+    <script>
+        function activateUser(userId) {
+            // Implement logic to activate user with the given ID
+            console.log("Activate user with ID:", userId);
+        }
+
+        function deactivateUser(userId) {
+            // Implement logic to deactivate user with the given ID
+            console.log("Deactivate user with ID:", userId);
+        }
+    </script>
+
+</body>
+
+</html>

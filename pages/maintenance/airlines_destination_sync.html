@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Airline Destination Sync</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        button {
+            padding: 8px 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Airline Destination Sync</h2>
+
+    <p>
+        Click the button below to synchronize One Flight's database with the supported destinations of a specific
+        airline.
+    </p>
+
+    <label for="airlineSelect">Select Airline:</label>
+    <select id="airlineSelect">
+        <option value="BR">EVA Air</option>
+        <option value="PR">Philippine Airlines</option>
+        <!-- Add more airline options as needed -->
+    </select>
+
+    <button onclick="syncDestinations()">Sync Destinations</button>
+
+    <script>
+        function syncDestinations() {
+            // Get the selected airline code
+            const selectedAirline = document.getElementById("airlineSelect").value;
+
+            // Implement logic to trigger the synchronization process for the selected airline
+            console.log("Sync destinations for airline:", selectedAirline);
+
+            // You would typically make an AJAX request or a similar mechanism to communicate with the server-side
+            // to perform the actual synchronization with the airline's data.
+            // For simplicity, we're just logging the selected airline for now.
+        }
+    </script>
+
+</body>
+
+</html>

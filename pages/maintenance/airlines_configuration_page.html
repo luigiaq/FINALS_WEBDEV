@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Airline Configuration</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        button {
+            padding: 8px 16px;
+            cursor: pointer;
+        }
+
+        .remove-btn {
+            background-color: #f44336;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Airline Configuration</h2>
+
+    <table>
+        <tr>
+            <th>Airline Code</th>
+            <th>Airline Name</th>
+            <th>Action</th>
+        </tr>
+        <tr>
+            <td>BR</td>
+            <td>EVA Air</td>
+            <td>
+                <button class="remove-btn" onclick="removeAirline('BR')">Remove</button>
+            </td>
+        </tr>
+        <tr>
+            <td>PR</td>
+            <td>Philippine Airlines</td>
+            <td>
+                <button class="remove-btn" onclick="removeAirline('PR')">Remove</button>
+            </td>
+        </tr>
+        <!-- Add more airline rows as needed -->
+    </table>
+
+    <form id="addAirlineForm">
+        <label for="airlineCode">Airline Code:</label>
+        <input type="text" id="airlineCode" name="airlineCode" required>
+
+        <label for="airlineName">Airline Name:</label>
+        <input type="text" id="airlineName" name="airlineName" required>
+
+        <button type="button" onclick="addAirline()">Add Airline</button>
+    </form>
+
+    <script>
+        function removeAirline(airlineCode) {
+            // Implement logic to remove the airline with the given code
+            console.log("Remove airline with code:", airlineCode);
+        }
+
+        function addAirline() {
+            // Implement logic to add the airline from the form data
+            const airlineCode = document.getElementById("airlineCode").value;
+            const airlineName = document.getElementById("airlineName").value;
+
+            console.log("Add airline:", { airlineCode, airlineName });
+
+            // You may want to update the table dynamically here
+            // For simplicity, let's just log the data for now
+        }
+    </script>
+
+</body>
+
+</html>

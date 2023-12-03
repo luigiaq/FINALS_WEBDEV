@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Price Breakdown Configuration</title>
+</head>
+
+<body>
+
+    <h2>Price Breakdown Configuration</h2>
+
+    <table>
+        <tr>
+            <th>Charge Name</th>
+            <th>Mark Up Type</th>
+            <th>Markup Value</th>
+            <th>Hidden Tag</th>
+            <th>Action</th>
+        </tr>
+        <tr>
+            <td>One Flight Commission</td>
+            <td>Percentage</td>
+            <td>10%</td>
+            <td>No</td>
+            <td>
+                <button class="remove-btn" onclick="removeCharge('One Flight Commission')">Remove</button>
+            </td>
+        </tr>
+        <tr>
+            <td>Booking Fee</td>
+            <td>Fixed</td>
+            <td>2 Euro / Traveler</td>
+            <td>No</td>
+            <td>
+                <button class="remove-btn" onclick="removeCharge('Booking Fee')">Remove</button>
+            </td>
+        </tr>
+        <tr>
+            <td>Tax</td>
+            <td>Percentage</td>
+            <td>12% of all charges</td>
+            <td>No</td>
+            <td>
+                <button class="remove-btn" onclick="removeCharge('Tax')">Remove</button>
+            </td>
+        </tr>
+        <!-- Add more charge rows as needed -->
+    </table>
+
+    <form id="addChargeForm">
+        <label for="chargeName">Charge Name:</label>
+        <input type="text" id="chargeName" name="chargeName" required>
+
+        <label for="markUpType">Mark Up Type:</label>
+        <select id="markUpType" name="markUpType" required>
+            <option value="Percentage">Percentage</option>
+            <option value="Fixed">Fixed</option>
+        </select>
+
+        <label for="markupValue">Markup Value:</label>
+        <input type="text" id="markupValue" name="markupValue" required>
+
+        <label for="hiddenTag">Hidden Tag:</label>
+        <select id="hiddenTag" name="hiddenTag" required>
+            <option value="No">No</option>
+            <option value="Yes">Yes</option>
+        </select>
+
+        <button type="button" onclick="addCharge()">Add Charge</button>
+    </form>
+
+    <script>
+        function removeCharge(chargeName) {
+            // Implement logic to remove the charge with the given name
+            console.log("Remove charge:", chargeName);
+        }
+
+        function addCharge() {
+            // Implement logic to add the charge from the form data
+            const chargeName = document.getElementById("chargeName").value;
+            const markUpType = document.getElementById("markUpType").value;
+            const markupValue = document.getElementById("markupValue").value;
+            const hiddenTag = document.getElementById("hiddenTag").value;
+
+            console.log("Add charge:", { chargeName, markUpType, markupValue, hiddenTag });
+
+            // You may want to update the table dynamically here
+            // For simplicity, let's just log the data for now
+        }
+    </script>
+
+</body>
+
+</html>
