@@ -1,32 +1,77 @@
 <!DOCTYPE html>
 <html>
+    <head>
+        <meta charset= "ISO-8859-1">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=MuseoModerno:wght@600&display=swap" rel="stylesheet">
+        <title>Flight Search Page</title>
+        <style>
+            .h1 {
+                text-align: center;
+    			color:rgb(255, 255, 255);
+    			top: 70px;
+   			 	margin: auto;
+    			font-family: 'MuseoModerno', sans-serif;
+                font-size: 30px;
+                background-color: rgba(0, 0, 0, 0.4);
+                backdrop-filter: blur(20px);
+            }
+			body {
+				background-image: url('flight search.jpg');
+				background-repeat: no-repeat;
+				background-attachment: fixed;
+				background-size: 100% 100%;
+			}
+            label{
+                color:rgb(255, 255, 255);
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                background-color: rgba(0, 0, 0, 0.4);
+                backdrop-filter: blur(20px);
+            }
+            button{
+                cursor: pointer;
+                font-family: 'MuseoModerno', sans-serif;
+            }
+            a:link{
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                background-color: rgba(0, 0, 0, 0.4);
+                backdrop-filter: blur(20px);
+            }
+        </style>
+    </head>
 
-<head>
-    <title>Flight Search Page</title>
-</head>
+    <body>
+        <img src="logo no bg.png"
+        width="300"
+        height="200">
 
-<body>
-    <h1>Flight Search Page</h1>
-    <label for="preferred-airlines">Preferred Airlines:</label>
-    <select id="preferred-airlines">
-        <option value="Delta">Delta</option>
-        <option value="United">United</option>
-        <option value="American">American</option>
-    </select>
-    <br>
-    <label for="travel-type">Travel Type:</label>
-    <select id="travel-type">
-        <option value="One Way">One Way</option>
-        <option value="Round Trip">Round Trip</option>
-    </select>
-    <br>
-    <div style="border: 1px solid black; height: 200px; width: 500px; text-align: center;">
-        List of Flights here
-    </div>
-    <br>
-    <button>Book This</button>
-    <button>Book That</button>
-    <br>
-</body>
-
+        <h1 class = "h1">Flight Search</h1>
+        <label for="preferred-airlines">Preferred Airlines:</label>
+        <select id="preferred-airlines">
+            <option value="Delta">Delta</option>
+            <option value="United">United</option>
+            <option value="American">American</option>
+        </select>
+        <br>
+        <label for="travel-type">Travel Type:</label>
+        <select id="travel-type">
+            <option value="One Way">One Way</option>
+            <option value="Round Trip">Round Trip</option>
+        </select>
+        <br>
+        <label style="border: 1px solid black; height: 300px; width: 500px; text-align: center;">
+            List of Flights here
+        </label>
+        <br>
+        <button>Search Flight</button>
+        <br>
+        <br>
+        <Label>
+            Want to book a flight?
+        </Label>
+        <a href="flight_reservation_page.html" style="color: aqua;">Book here</a>
+        <br>
+    </body>
 </html>

@@ -6,7 +6,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=MuseoModerno:wght@600&display=swap" rel="stylesheet">
-        <title>One Flight Registration</title>
+        <title>One Flight Login</title>
         <style>
         	.h1 {
     			text-align: center;
@@ -21,7 +21,7 @@
                 backdrop-filter: blur(20px);
 			}
 			body {
-				background-image: url('register bg.jpg');
+				background-image: url('login bg.jpg');
 				background-repeat: no-repeat;
 				background-attachment: fixed;
 				background-size: 100% 100%;
@@ -40,6 +40,15 @@
 				cursor: pointer;
                 font-family: 'MuseoModerno', sans-serif;
 			}
+            .container2{
+                text-align: center;
+                margin:auto;
+            }
+            a:link{
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                background-color: rgba(0, 0, 0, 0.4);
+                backdrop-filter: blur(20px);
+            }
         </style>
     </head>
 
@@ -49,46 +58,37 @@
         height="200">
 
         <h1 class = "h1">One Flight</h1>
-
+        
         <div class="container">
             <div class="row">
-                <form th:action="@registration" th:object="${guest}" method="post">
+                <form th:action="@login" th:object="${user}" method="post">
                     <div>
                         <label>Email: </label>
-                        <input type="text" id="email" class="form-control" name="email">
+                        <input type="text" id="email" class="form-control" name="email" placeholder="Your email">
                     </div>
                     <div>
                         <label>Password: </label>
-                        <input type="text" id="password" class="form-control" name="password">
-                    </div>
-                    <div>
-                        <label>Birthday: </label>
-                        <input type="text" id="birthday" class="form-control" name="birthday">
-                    </div>
-                    <div>
-                        <label>Name: </label>
-                        <input type="text" id="name" class="form-control" name="name">
-                    </div>
-                    <div>
-                        <label>Phone Number: </label>
-                        <input type="text" id="phoneNumber" class="form-control" name="phoneNumber">
-                    </div>
-                    <div>
-                        <label>Passport Details: </label>
-                        <input type="text" id="passportDetails" class="form-control" name="passportDetails">
-                    </div>
-                    <div>
-                        <label for="user">Choose a user type:</label>
-                        <select id="userType" name="userType">
-                            <option value="guest">Guest</option>
-                            <option value="admin">Admin</option>
-                        </select>
-                    </div>
-                    <div>
-                        <button id="register">Register</button>
+                        <input type="text" id="password" class="form-control" name="password" placeholder="Your password">
                     </div>
                 </form>
             </div>
+            <div class="container2">
+                <br>
+                <button id="login">Login</button>
+                <br>
+                <br>
+                <Label>
+                    Don't have an account yet?
+                </Label>
+                <a href="sign-up_page.html" style="color: aqua;">Register here</a>
+                <br>
+            </div>
         </div>
     </body>
+
+    <script>
+        document.getElementById("login").onclick = function () {
+			location.href = "flight_search_page.html";
+		};
+    </script>
 </html>

@@ -1,34 +1,69 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Home Page</title>
+		<meta charset= "ISO-8859-1">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=MuseoModerno:wght@600&display=swap" rel="stylesheet">
+		<title>Home Page</title>
         <style>
         	.h1 {
     			text-align: center;
-    			color:rgb(197, 90, 33);
+    			color:rgb(255, 255, 255);
     			top: 70px;
    			 	margin: auto;
-   				 width: 640px; 
+   				width: 640px; 
     			padding: 120px;
-    			font-family: 'Lexend Deca', sans-serif;
+    			font-family: 'MuseoModerno', sans-serif;
+				font-size: 70px;
+				background-color: rgba(0, 0, 0, 0.4);
+                backdrop-filter: blur(20px);
 			}
 			body {
-    			background-color:rgb(234, 175, 103);
+				background-image: url('plane interior.jpg');
+				background-repeat: no-repeat;
+				background-attachment: fixed;
+				background-size: 100% 100%;
 			}
 			.p {
-    			position: absolute; 
-    			top: 3px;
-    			right: 3px;
+				text-align: center;
+				color: rgb(255, 255, 255);
+				margin: auto;
     			font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+				background-color: rgba(0, 0, 0, 0.4);
+                backdrop-filter: blur(20px);
+			}
+			button{
+				cursor: pointer;
+				margin: 1cm;
+				font-size: 50px;
+				font-family: 'MuseoModerno', sans-serif;
 			}
         </style>
     </head>
+
     <body>
+		<h2>
+		<img src="logo no bg.png"
+        width="300"
+        height="200">
+		</h2>
+
         <h1 class = "h1">Welcome to OneFlight</h1>
         <p class = "p">
-            Hi, Guest
-            <button>Login</button>
-            <button>Register</button>
+            <button id="Login">Login</button>
+            <button id="Register">Register</button>
         </p>
     </body>
+
+	<script type="text/javascript">
+		document.getElementById("Login").onclick = function () {
+			location.href = "login.html";
+		};
+
+		document.getElementById("Register").onclick = function () {
+			location.href = "sign-up_page.html";
+		};
+	</script>
 </html>
