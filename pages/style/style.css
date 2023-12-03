@@ -1,0 +1,60 @@
+body {
+    background-color: #1a1a1a;
+    /* Dark background color */
+    color: #ffffff;
+    /* Light text color */
+}
+
+/* Headers and other prominent text */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #ffcc00;
+    /* Yellowish header color */
+}
+
+/* Links */
+a {
+    color: #4CAF50;
+    /* Green link color */
+}
+
+/* Navigation bar */
+nav {
+    background-color: #333;
+    /* Dark gray navigation background */
+}
+
+/* Buttons */
+button,
+input[type="submit"],
+input[type="reset"] {
+    background-color: #4CAF50;
+    /* Green button background color */
+    color: #ffffff;
+    /* Light text color */
+}
+
+/* Form elements */
+input,
+textarea {
+    background-color: #333;
+    /* Dark gray form background */
+    color: #ffffff;
+    /* Light text color */
+}
+
+/* Dark mode toggle button (optional) */
+.dark-mode-toggle {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background-color: #333;
+    color: #ffffff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
